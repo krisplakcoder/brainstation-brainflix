@@ -1,9 +1,15 @@
 import avatar from '../../assets/images/Mohan-muruge.jpg'
-export default function Comment() {
+export default function Comment( {commentArray}) {
+
+    let count = 0;
+
+    for(let i = 0; i < commentArray.length; i++) {
+        count += 1;
+    }
 
     return (
         <>
-            <div className="comment-numbers">3 Comments</div>
+            <div className="comment-numbers">{count} Comments</div>
             <section className="comment">
                 <div className="comment__image-container">
                     <img className="comment__image" src={avatar} alt="avatar image"></img>
@@ -18,4 +24,5 @@ export default function Comment() {
             </section>
         </>
     )
+    count = 0;
 }
