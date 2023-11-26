@@ -5,7 +5,7 @@ const coffeeblurb = ("Aromatic shop breve milk ristretto crema in, siphon acerbi
                      single shot extra  bar\
                     , turkish, skinny a steamed cinnamon froth.");
 
-export default function CommentSection() {
+export default function CommentSection(name, comment, timestamp) {
     return (
 
         <section className="comment-section">
@@ -14,10 +14,10 @@ export default function CommentSection() {
             </div>
             <div className="comments-container">
                 <div className="comments__details">
-                    <div className="comments__details-username">Dave Accounting</div>
-                    <div className="comments__details-date">10 Jan 2011</div>
+                    <div className="comments__details-username">{name}</div>
+                    <div className="comments__details-date">{timestamp}</div>
                 </div>
-                <div className="comments__blurb">{coffeeblurb}</div>
+                <div className="comments__blurb">{comment}</div>
             </div>
         </section>
     )
