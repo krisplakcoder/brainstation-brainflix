@@ -1,0 +1,12 @@
+// border mixins
+
+@mixin border-styling {
+    border: 1px solid $mercury;
+}
+
+@mixin button-styling {
+    height: 40px;
+    width: 100%;
+    background-color: $brainflix-blue;
+    color: $white;
+}

@@ -1,35 +1,27 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import Header from './components/component/header'
+import Video from './components/component/video'
+import Description from './components/component/description'
+import VideoStats from './components/component/stats'
+import Comment from './components/component/comment'
+import CommentSection from './components/component/commentSection'
+import VideoList from './components/component/videoList'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  const coffeeIpsum = "Robusta bar  grinder, white that single shot steamed seasonal shop qui grinder ristretto. Instant bar  skinny sugar, milk latte robust extraction Percolator roast, cinnamon variety extraction ut beans wings. Body, percolator fair trade, galão, carajillo skinny spoon flavour beans iced. Filter beans, caramelization skinny brewed, et macchiato dark mug aroma barista.";
+  
   return (
     <>
       <Header />
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Video />
+      <VideoStats author={"Lorum Ipsum"} date={Date.now()} viewCount={434434343} likes={"hello"}/>
+      <Description text={coffeeIpsum}/>
+      <Comment />
+      <CommentSection />
+      <VideoList />
+
     </>
   )
 }
