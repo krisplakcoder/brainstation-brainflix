@@ -1,6 +1,4 @@
-// import videoList from '../../data/videos.json'
 
-// const vidImage = videoList[1].image;
 
 export default function VideoList({newVideoArray, changeOnClick}) {
 
@@ -22,10 +20,10 @@ export default function VideoList({newVideoArray, changeOnClick}) {
                                 <div className="video-list__image">
                                     <img src={video.image} alt="next video" className="next-video__image" />
                                 </div>
-                            <div className="next-video__details">
-                                <div className="next-video__details-title">{video.title}</div>
-                                <div className="next-video__details-author">{video.channel}</div>
-                            </div>
+                                <div className="next-video__details">
+                                    <div className="next-video__details-title">{video.title}</div>
+                                    <div className="next-video__details-author">{video.channel}</div>
+                                </div>
                         </div></a>
                     )})
                     }                    

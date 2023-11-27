@@ -1,4 +1,4 @@
-// import videoArray from '../../data/video-details.json'
+
 
 export default function Video( {image, title, video} ) {
 
@@ -15,4 +15,3 @@ export default function Video( {image, title, video} ) {
 
 }
 
-// {videoURL, videoTitle}

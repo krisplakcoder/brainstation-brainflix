@@ -10,13 +10,6 @@ import CommentSection from './components/component/commentSection'
 import VideoList from './components/component/videoList'
 import './App.css'
 
-// const setCommentSection = VideoDetails[0].comments;
-// const updateCommentSection = setCommentSection.map((element) => CommentSection(element.name, element.comment, element.timestamp));
-// const setVideoList = videos.map(newArray => ({title: newArray.title, channel: newArray.channel, image: newArray.image}));
-// const updateVideoList = setVideoList.map((element) => VideoList(element.image, element.title, element.channel));
-// let setCommentSection = selectedVideo.comments;
-// let updateCommentSection = setCommentSection.map((element) => CommentSection(element.name, element.comment, element.timestamp));
-// console.log(updateVideoList);
 
 function App() {
 
@@ -41,7 +34,6 @@ function App() {
     return newDate.toDateString();
 }
 
-  // const UpdateVideoList = inactiveVideos.map((element) => (VideoList(element.image, element.title, element.channel)));
 
   return (
     <>
@@ -52,7 +44,6 @@ function App() {
       <Comment commentArray={selectedVideo.comments}/>
       <CommentSection commentArray={selectedVideo.comments} />
       <VideoList newVideoArray={inactiveVideos} changeOnClick={changeVideo} />
-      {/* <VideoList /> */}
 
     </>
   )
