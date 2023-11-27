@@ -27,6 +27,9 @@
 }
 
 .comments__blurb {
+
+    padding-top: 0.5rem;
+    
     @include tablet {
         padding-top: 0.5rem;
     }

@@ -11,18 +11,21 @@
     &__player {
         width: 100%;
         aspect-ratio: 16 / 9;
+        object-fit: cover;
         background-color: $brainflix-darkblack;
 
         @include tablet {
             width:100%;
             aspect-ratio: 16 / 9;
-            height:65vh;
+            object-fit: contain;
+            max-height: 75vh;
         }
 
         @include desktop {
             width: 100%;
             aspect-ratio: 16 / 9;
-            height: 100vh;
+            object-fit: contain;
+            max-height: 100vh;
         }
     }
 

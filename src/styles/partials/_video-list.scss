@@ -1,3 +1,8 @@
+@import './variables';
+@import './mixins';
+@import './typography';
+@import './breakpoints';
+
 .video-list {
     box-sizing: border-box;
     width: 100%;
@@ -6,6 +11,7 @@
     &__title {
         font-size: 0.875rem;
         color: $mercury;
+        padding-top: 0.5rem;
     }
 
     &__container {
@@ -14,31 +20,69 @@
         justify-content: space-between;
         border: 1px solid red;
         width: 100%;
-        height: auto;
+        padding: 1rem 0rem 1rem 0rem;
+        text-decoration: none;
+        color: $brainflix-black;
+
+        @include tablet {
+            width:40%;
+        }
+
+        @include desktop {
+            width: 35%;
+        }
     }
 
     &__image {
+        width: 10rem;
+        height: 5rem;
+        object-fit: fill;
+    }
+
+}
+
+.next-video {
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        padding-left: 1rem;
         width: 50%;
+
+        @include tablet {
+            width: 60%;
+        }
+        
+        &-title {
+            font-weight: 700;
+            line-height: 1.25rem;
+        }
+    }
+
+    &__image {
+        width: 100%;
         height: 100%;
-    }
-
-}
-
-.next-video__details {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-    padding-left: 1rem;
-
-    &-title {
-        font-weight: 700;
-        line-height: 1.25rem;
+        border-radius: 4px;
     }
 }
-.next-video__image {
-    width: 100%;
-    height: 100%;
-    border-radius: 4px;
-}
+// .next-video__details {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     align-items: start;
+//     padding-left: 1rem;
+
+//     &-title {
+//         font-weight: 700;
+//         line-height: 1.25rem;
+//     }
+// }
+// .next-video__image {
+//     width: 100%;
+//     height: 100%;
+//     border-radius: 4px;
+
+// }
 

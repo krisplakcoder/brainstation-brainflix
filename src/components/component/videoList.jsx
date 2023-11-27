@@ -18,9 +18,10 @@ export default function VideoList({newVideoArray, changeOnClick}) {
                 newVideoArray.map((video) => {
                     return (
                         <a onClick={(event) => {videoClick(event, video.id);}}>
-                            <div className="video-list__container">                                <div className="video-list__image">
-                                <img src={video.image} alt="next video" className="next-video__image" />
-                            </div>
+                            <div className="video-list__container">                                
+                                <div className="video-list__image">
+                                    <img src={video.image} alt="next video" className="next-video__image" />
+                                </div>
                             <div className="next-video__details">
                                 <div className="next-video__details-title">{video.title}</div>
                                 <div className="next-video__details-author">{video.channel}</div>

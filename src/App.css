@@ -297,20 +297,26 @@
 .video__player {
   width: 100%;
   aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-color: #000000;
 }
 @media screen and ((min-width: 768px) and (max-width: 1279px)) {
   .video__player {
     width: 100%;
     aspect-ratio: 16/9;
-    height: 65vh;
+    -o-object-fit: contain;
+       object-fit: contain;
+    max-height: 75vh;
   }
 }
 @media screen and (min-width: 1280px) {
   .video__player {
     width: 100%;
     aspect-ratio: 16/9;
-    height: 100vh;
+    -o-object-fit: contain;
+       object-fit: contain;
+    max-height: 100vh;
   }
 }
 .video__title {
@@ -534,6 +540,9 @@ video::-webkit-media-controls-timeline {
   width: 40px;
 }
 
+.comments__blurb {
+  padding-top: 0.5rem;
+}
 @media screen and ((min-width: 768px) and (max-width: 1279px)) {
   .comments__blurb {
     padding-top: 0.5rem;
@@ -564,6 +573,14 @@ video::-webkit-media-controls-timeline {
   color: #E1E1E1;
 }
 
+@font-face {
+  font-family: "Avenir-Next-Regular";
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf) format("otf");
+}
+@font-face {
+  font-family: "Avenir-Next-Bold";
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf) format("otf");
+}
 .video-list {
   box-sizing: border-box;
   width: 100%;
@@ -572,6 +589,7 @@ video::-webkit-media-controls-timeline {
 .video-list__title {
   font-size: 0.875rem;
   color: #E1E1E1;
+  padding-top: 0.5rem;
 }
 .video-list__container {
   display: flex;
@@ -579,11 +597,25 @@ video::-webkit-media-controls-timeline {
   justify-content: space-between;
   border: 1px solid red;
   width: 100%;
-  height: auto;
+  padding: 1rem 0rem 1rem 0rem;
+  text-decoration: none;
+  color: #323232;
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .video-list__container {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .video-list__container {
+    width: 35%;
+  }
 }
 .video-list__image {
-  width: 50%;
-  height: 100%;
+  width: 10rem;
+  height: 5rem;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .next-video__details {
@@ -592,12 +624,17 @@ video::-webkit-media-controls-timeline {
   justify-content: space-between;
   align-items: start;
   padding-left: 1rem;
+  width: 50%;
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .next-video__details {
+    width: 60%;
+  }
 }
 .next-video__details-title {
   font-weight: 700;
   line-height: 1.25rem;
 }
-
 .next-video__image {
   width: 100%;
   height: 100%;
