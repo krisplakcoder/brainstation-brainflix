@@ -137,6 +137,8 @@
 
         &-button {
             @include button-styling;
+            border: none;
+            border-radius: 4px;
             margin-top: 1rem;
 
             @include tablet {

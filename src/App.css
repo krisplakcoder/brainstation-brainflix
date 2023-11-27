@@ -140,6 +140,8 @@
   height: 40px;
   width: 100%;
   background-color: #0095FF;
+  border: none;
+  border-radius: 4px;
   color: #FFFFFF;
   display: flex;
   flex-direction: row;
@@ -508,6 +510,8 @@ video::-webkit-media-controls-timeline {
   width: 100%;
   background-color: #0095FF;
   color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
   margin-top: 1rem;
 }
 @media screen and ((min-width: 768px) and (max-width: 1279px)) {
@@ -723,9 +727,4 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0 1rem;
-  font-family: "Avenir-Next-Regular";
-}
-
-* {
-  font-family: "Avenir-Next-Regular";
 }/*# sourceMappingURL=App.css.map */
