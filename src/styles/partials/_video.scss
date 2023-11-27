@@ -1,23 +1,44 @@
 @import './variables';
 @import './mixins';
 @import './typography';
+@import './breakpoints';
 
 .video {
     display: flex;
     flex-direction: column;
-    aspect-ratio: 16 / 9;
     width: 100%;
-
-
+   
     &__player {
         width: 100%;
         aspect-ratio: 16 / 9;
         background-color: $brainflix-darkblack;
+
+        @include tablet {
+            width:100%;
+            aspect-ratio: 16 / 9;
+            height:65vh;
+        }
+
+        @include desktop {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            height: 100vh;
+        }
     }
 
     &__title {
         font-family: 'Avenir-Next-Regular';
         font-size: 1.5rem;
+
+        @include tablet {
+            font-size: $desktop-headersize;
+        }
+
+        @include desktop {
+            font-size: $desktop-headersize;
+            padding: 1rem 0em 1rem 2em;
+            margin: 0;
+        }
     }
 }
 
@@ -25,3 +46,4 @@ video::-webkit-media-controls-timeline {
     background-color: $brainflix-darkblack;
     opacity: 50%;
 }
+

@@ -57,6 +57,7 @@
     align-items: center;
     justify-content: space-between;
     margin: 0rem;
+    padding-right: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -103,6 +104,7 @@
   .navbar__searchbar {
     width: 40%;
     max-width: 500px;
+    height: 40px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -196,16 +198,87 @@
   border-bottom: 1px solid #E1E1E1;
   font-family: "Avenir-Next-Regular";
 }
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .vid-stats__container {
+    border-top: none;
+    justify-content: space-between;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .vid-stats__container {
+    border-top: none;
+    border-right: 1px solid #E1E1E1;
+    width: 60%;
+    padding-left: 4rem;
+    padding-right: 1rem;
+    margin: 0;
+    justify-content: space-between;
+  }
+}
 
 .vid-stats {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: start;
   width: 100%;
+  padding: 0.5rem 0rem;
+  margin: 0;
+  font-size: 0.875rem;
+}
+.vid-stats > p {
+  margin: 0;
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .vid-stats > p {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .vid-stats > p {
+    margin: 0;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .vid-stats {
+    flex-direction: row;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    margin: 0rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .vid-stats {
+    flex-direction: row;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    margin: 0rem;
+  }
 }
 .vid-stats--bold {
   font-weight: 700;
   color: #000000;
+  font-size: 0.8125rem;
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .vid-stats--bold {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .vid-stats--bold {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+}
+.vid-stats__icon {
+  margin-right: 0.5rem;
 }
 
 @font-face {
@@ -219,7 +292,6 @@
 .video {
   display: flex;
   flex-direction: column;
-  aspect-ratio: 16/9;
   width: 100%;
 }
 .video__player {
@@ -227,9 +299,35 @@
   aspect-ratio: 16/9;
   background-color: #000000;
 }
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .video__player {
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: 65vh;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .video__player {
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: 100vh;
+  }
+}
 .video__title {
   font-family: "Avenir-Next-Regular";
   font-size: 1.5rem;
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .video__title {
+    font-size: 2.0625rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .video__title {
+    font-size: 2.0625rem;
+    padding: 1rem 0em 1rem 2em;
+    margin: 0;
+  }
 }
 
 video::-webkit-media-controls-timeline {
@@ -255,16 +353,52 @@ video::-webkit-media-controls-timeline {
   padding: 1rem 0;
   border-bottom: 1px solid #E1E1E1;
 }
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .comment {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment {
+    width: 60%;
+    padding-left: 4rem;
+    border-right: 1px solid #E1E1E1;
+  }
+}
 .comment-numbers {
   font-weight: 700;
 }
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .comment-numbers {
+    padding-top: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment-numbers {
+    padding-top: 2rem;
+    padding-left: 4rem;
+  }
+}
 .comment__image {
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
 }
 .comment__image-container {
   margin-right: 1rem;
+  padding-top: 1rem;
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .comment__image-container {
+    padding-top: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__image-container {
+    padding-top: 1.5rem;
+  }
 }
 .comment__container {
   box-sizing: border-box;
@@ -272,13 +406,53 @@ video::-webkit-media-controls-timeline {
   flex-direction: column;
   max-width: 100%;
 }
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .comment__container {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__container {
+    width: 100%;
+  }
+}
 .comment__form {
   max-width: 100%;
   width: 100%;
 }
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .comment__form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .comment__form--position {
+    width: 100%;
+    padding-right: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__form--position {
+    width: 100%;
+    padding-right: 1rem;
+  }
+}
 .comment__form-label {
   color: #E1E1E1;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   padding-bottom: 1rem;
 }
 .comment__form-box {
@@ -290,6 +464,18 @@ video::-webkit-media-controls-timeline {
   border: 1px solid #E1E1E1;
   outline: none;
 }
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .comment__form-box {
+    height: 40px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__form-box {
+    height: 40px;
+    width: 100%;
+  }
+}
 .comment__form-box:focus {
   border: 2px solid #0095FF;
 }
@@ -300,10 +486,32 @@ video::-webkit-media-controls-timeline {
   color: #FFFFFF;
   margin-top: 1rem;
 }
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .comment__form-button {
+    height: 40px;
+    width: 150px;
+    margin-top: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__form-button {
+    height: 40px;
+    width: 150px;
+    margin-top: 1.5rem;
+  }
+}
 .comment__form-button:hover {
   background-color: #0065AD;
 }
 
+@font-face {
+  font-family: "Avenir-Next-Regular";
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf) format("otf");
+}
+@font-face {
+  font-family: "Avenir-Next-Bold";
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf) format("otf");
+}
 .comment-section {
   box-sizing: border-box;
   display: flex;
@@ -311,12 +519,30 @@ video::-webkit-media-controls-timeline {
   width: 100%;
   padding: 1rem 0rem;
   border-bottom: 1px solid #E1E1E1;
+  line-height: 1.25rem;
+}
+@media screen and (min-width: 1280px) {
+  .comment-section {
+    width: 65%;
+    padding-left: 4rem;
+  }
 }
 .comment-section__image {
   background-color: grey;
   border-radius: 50%;
-  height: 25px;
-  width: 25px;
+  height: 40px;
+  width: 40px;
+}
+
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .comments__blurb {
+    padding-top: 0.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__blurb {
+    padding-top: 0.5rem;
+  }
 }
 
 .comments-container {
@@ -398,6 +624,9 @@ video::-webkit-media-controls-timeline {
 @media screen and (min-width: 1280px) {
   .video-description {
     font-size: 0.875rem;
+    width: 60%;
+    padding-left: 4rem;
+    border-right: 1px solid #E1E1E1;
   }
 }
 

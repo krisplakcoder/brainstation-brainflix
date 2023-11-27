@@ -1,6 +1,7 @@
 @import './variables';
 @import './mixins';
 @import './typography';
+@import './breakpoints';
 
 .comment {
 
@@ -12,18 +13,47 @@
     margin: 0rem;
     padding: 1rem 0;
     border-bottom: 1px solid $mercury;
-    
+
+    @include tablet {
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    @include desktop {
+        width: 60%;
+        padding-left: 4rem;
+        border-right: 1px solid $mercury;
+    }
     &-numbers {
         font-weight: 700;
+
+        @include tablet {
+            padding-top: 1.5rem;
+        }
+        
+        @include desktop {
+            padding-top: 2rem;
+            padding-left: 4rem;
+        }
     }
 
     &__image {
         border-radius: 50%;
-        width: 36px;
-        height: 36px;
+        width: 40px;
+        height: 40px;
 
         &-container {
             margin-right: 1rem;
+            padding-top: 1rem;
+
+            @include tablet {
+                padding-top: 1.5rem;
+            }
+
+            @include desktop {
+                padding-top: 1.5rem;
+            }
         }
     }
 
@@ -32,15 +62,50 @@
         display: flex;
         flex-direction: column;
         max-width: 100%;
+
+        @include tablet {
+            width:100%;
+        }
+
+        @include desktop{
+            width: 100%;
+        }
     }
 
     &__form {
         max-width: 100%;
         width: 100%;
 
+        @include tablet {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: space-between;
+        }
+
+        @include desktop {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: space-between;
+        }
+
+        &--position {
+            @include tablet{
+                width: 100%;
+                padding-right: 1rem;
+            }
+
+            @include desktop {
+                width: 100%;
+                padding-right: 1rem;
+            }
+        }
         &-label {
             color: $mercury;
-            font-size: 0.8125rem;
+            font-size: 0.875rem;
             padding-bottom: 1rem;
         }
         &-box {
@@ -52,6 +117,16 @@
             @include border-styling;
             outline: none;
 
+            @include tablet {
+                height: 40px;
+                width: 100%;
+            }
+
+            @include desktop {
+                height: 40px;
+                width: 100%;
+            }
+
             &:focus {
                 border: 2px solid $brainflix-blue;
             }
@@ -60,6 +135,18 @@
         &-button {
             @include button-styling;
             margin-top: 1rem;
+
+            @include tablet {
+                height: 40px;
+                width: 150px;
+                margin-top: 1.5rem;
+            }
+
+            @include desktop {
+                height: 40px;
+                width: 150px;
+                margin-top: 1.5rem;
+            }
 
             &:hover {
                 background-color: $brainflix-darkblue;

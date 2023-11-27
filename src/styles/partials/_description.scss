@@ -13,5 +13,8 @@
 
     @include desktop {
         font-size: 0.875rem;
+        width: 60%;
+        padding-left: 4rem;
+        border-right: 1px solid $mercury;
     }
 }

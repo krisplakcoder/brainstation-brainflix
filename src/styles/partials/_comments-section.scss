@@ -1,5 +1,7 @@
 @import './mixins';
 @import './variables';
+@import './breakpoints';
+@import './typography';
 
 .comment-section {
     box-sizing: border-box;
@@ -8,16 +10,31 @@
     width: 100%;
     padding: 1rem 0rem;
     border-bottom: 1px solid $mercury;
+    line-height: 1.25rem;
+
+    @include desktop {
+        width: 65%;
+        padding-left: 4rem;
+    }
 
     &__image {
         background-color: grey;
         border-radius: 50%;
-        height: 25px;
-        width: 25px;
+        height: 40px;
+        width: 40px;
     }
 
 }
 
+.comments__blurb {
+    @include tablet {
+        padding-top: 0.5rem;
+    }
+
+    @include desktop {
+        padding-top: 0.5rem;
+    }
+}
 .comments-container {
     display: flex;
     flex-direction: column;

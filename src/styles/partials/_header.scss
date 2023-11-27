@@ -54,6 +54,7 @@
             align-items: center;
             justify-content: space-between;
             margin: 0rem;
+            padding-right:2rem;
         }
 
         @include desktop {
@@ -100,6 +101,7 @@
         @include tablet {
             width: 40%;
             max-width: 500px;
+            height: 40px;
         }
 
         @include desktop {
