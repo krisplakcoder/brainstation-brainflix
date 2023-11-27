@@ -7,10 +7,16 @@
 @import './styles/partials/description';
 @import './styles/partials/typography';
 
+@font-face{
+    font-family: "Avenir-Regular";
+    src: url("./assets/fonts/AvenirNextLTPro-Regular.otf");
+}
+
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0 1rem;
+    font-family: "Avenir-Regular";
 }
 
 
