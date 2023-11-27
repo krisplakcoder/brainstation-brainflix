@@ -1,11 +1,13 @@
 // import videoArray from '../../data/video-details.json'
 
-export default function Video( {image, title} ) {
+export default function Video( {image, title, video} ) {
 
     return (
         <>
             <section className="video">
-                <img className='video__player' src={image} alt='video placeholder'></img>
+                <video className='video__player' controls poster={image}>
+                    <source src={video} />
+                </video>
                 <h1 className="video__title">{title}</h1>
             </section>
         </>

@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Avenir-Next-Regular";
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf) format("otf");
+}
+@font-face {
+  font-family: "Avenir-Next-Bold";
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf) format("otf");
+}
 .navbar {
   display: flex;
   flex-direction: column;
@@ -5,10 +13,37 @@
   align-items: center;
   padding-bottom: 1rem;
   padding-top: 1rem;
+  font-family: "Avenir-Next-Regular";
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .navbar {
+    padding: 1rem 0rem;
+    height: auto;
+  }
 }
 .navbar__img {
   height: 25px;
   width: 120px;
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .navbar__img--mobile {
+    display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navbar__img--mobile {
+    display: none;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .navbar__img--desktop {
+    display: none;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .navbar__img--desktop {
+    margin-left: 2rem;
+  }
 }
 .navbar__search {
   display: flex;
@@ -16,7 +51,43 @@
   width: 100%;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .navbar__search {
+    align-items: center;
+    justify-content: space-between;
+    margin: 0rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navbar__search {
+    width: 90%;
+    margin: 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.navbar__search--space {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .navbar__search--space {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navbar__search--space {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 .navbar__searchbar {
   height: 36px;
@@ -28,11 +99,35 @@
 .navbar__searchbar:focus {
   border: 2px solid #0095FF;
 }
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .navbar__searchbar {
+    width: 40%;
+    max-width: 500px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navbar__searchbar {
+    width: 40%;
+    height: 40px;
+  }
+}
 
 .user-avatar {
   border-radius: 50%;
   width: 36px;
   height: 36px;
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .user-avatar {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .user-avatar {
+    height: 40px;
+    width: 40px;
+  }
 }
 
 .upload-button {
@@ -40,11 +135,58 @@
   width: 100%;
   background-color: #0095FF;
   color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40%;
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .upload-button {
+    gap: 20%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .upload-button {
+    gap: 20%;
+  }
 }
 .upload-button:hover {
   background-color: #0065AD;
 }
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .upload-button--mobile {
+    display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .upload-button--mobile {
+    display: none;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .upload-button--desktop {
+    display: none;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .upload-button--desktop {
+    width: 200px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .upload-button--desktop {
+    width: 200px;
+  }
+}
 
+@font-face {
+  font-family: "Avenir-Next-Regular";
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf) format("otf");
+}
+@font-face {
+  font-family: "Avenir-Next-Bold";
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf) format("otf");
+}
 .vid-stats__container {
   display: flex;
   flex-direction: row;
@@ -52,6 +194,7 @@
   color: #E1E1E1;
   border-top: 1px solid #E1E1E1;
   border-bottom: 1px solid #E1E1E1;
+  font-family: "Avenir-Next-Regular";
 }
 
 .vid-stats {
@@ -62,22 +205,46 @@
 }
 .vid-stats--bold {
   font-weight: 700;
-  color: black;
+  color: #000000;
 }
 
+@font-face {
+  font-family: "Avenir-Next-Regular";
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf) format("otf");
+}
+@font-face {
+  font-family: "Avenir-Next-Bold";
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf) format("otf");
+}
 .video {
   display: flex;
   flex-direction: column;
+  aspect-ratio: 16/9;
   width: 100%;
-  height: auto;
 }
 .video__player {
   width: 100%;
+  aspect-ratio: 16/9;
+  background-color: #000000;
 }
 .video__title {
+  font-family: "Avenir-Next-Regular";
   font-size: 1.5rem;
 }
 
+video::-webkit-media-controls-timeline {
+  background-color: #000000;
+  opacity: 50%;
+}
+
+@font-face {
+  font-family: "Avenir-Next-Regular";
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf) format("otf");
+}
+@font-face {
+  font-family: "Avenir-Next-Bold";
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf) format("otf");
+}
 .comment {
   display: flex;
   flex-direction: row;
@@ -211,6 +378,37 @@
   border-radius: 4px;
 }
 
+@font-face {
+  font-family: "Avenir-Next-Regular";
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf) format("otf");
+}
+@font-face {
+  font-family: "Avenir-Next-Bold";
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf) format("otf");
+}
+.video-description {
+  font-size: 0.8125rem;
+  font-family: "Avenir-Next-Regular";
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .video-description {
+    font-size: 0.875rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .video-description {
+    font-size: 0.875rem;
+  }
+}
+
+@font-face {
+  font-family: "Avenir-Next-Regular";
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf) format("otf");
+}
+@font-face {
+  font-family: "Avenir-Next-Bold";
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf) format("otf");
+}
 body {
   box-sizing: border-box;
   margin: 0;

@@ -1,4 +1,7 @@
-@import 'variables';
+@import './variables';
+@import './typography';
+@import 'breakpoints';
+@import './mixins';
 
 .navbar {
     display: flex;
@@ -7,11 +10,36 @@
     align-items: center;
     padding-bottom: 1rem;
     padding-top: 1rem;
+    font-family: 'Avenir-Next-Regular';
+
+    @include tablet {
+        padding: 1rem 0rem;
+        height: auto
+    }
   
 
     &__img {
         height: 25px;
         width: 120px;
+
+        &--mobile {
+            @include tablet {
+                display: none;
+            }
+
+            @include desktop {
+                display: none;
+            }
+        }
+
+        &--desktop {
+            @include mobile {
+                display: none;
+            }
+            @include tablet {
+                margin-left: 2rem;
+            }
+        }
     }
 
     &__search {
@@ -20,7 +48,41 @@
         width: 100%;
         margin-top:2rem;
         margin-bottom: 2rem;
-        justify-content: space-between;
+        // justify-content: space-between;
+
+        @include tablet {
+            align-items: center;
+            justify-content: space-between;
+            margin: 0rem;
+        }
+
+        @include desktop {
+            width: 90%;
+            margin: 0;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &--space {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            @include tablet{
+                width: 60%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+
+            @include desktop {
+                width: 50%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+        }
     }
 
     &__searchbar {
@@ -34,6 +96,16 @@
             &:focus {
                 border: 2px solid $brainflix-blue;
             }
+
+        @include tablet {
+            width: 40%;
+            max-width: 500px;
+        }
+
+        @include desktop {
+            width: 40%;
+            height: 40px;
+        }
     }
 
 }
@@ -43,6 +115,16 @@
     border-radius: 50%;
     width: 36px;
     height: 36px;
+
+    @include tablet {
+        height: 40px;
+        width: 40px;
+    }
+
+    @include desktop {
+        height: 40px;
+        width: 40px;
+    }
 }
 
 .upload-button {
@@ -51,8 +133,44 @@
     width: 100%;
     background-color: $brainflix-blue;
     color: $white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40%;
 
+    @include tablet {
+        gap:20%;
+    }
+
+    @include desktop {
+        gap:20%;
+    }
+    
     &:hover {
         background-color: $brainflix-darkblue;
+    }
+
+    &--mobile{
+        @include tablet {
+            display: none;
+        }
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &--desktop {
+        @include mobile {
+            display: none;
+        }
+
+        @include tablet {
+            width: 200px;
+        }
+
+        @include desktop {
+            width: 200px;
+        }
     }
 }

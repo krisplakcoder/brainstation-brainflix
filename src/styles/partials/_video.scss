@@ -1,14 +1,27 @@
+@import './variables';
+@import './mixins';
+@import './typography';
+
 .video {
     display: flex;
     flex-direction: column;
+    aspect-ratio: 16 / 9;
     width: 100%;
-    height: auto;
+
 
     &__player {
         width: 100%;
+        aspect-ratio: 16 / 9;
+        background-color: $brainflix-darkblack;
     }
 
     &__title {
+        font-family: 'Avenir-Next-Regular';
         font-size: 1.5rem;
     }
+}
+
+video::-webkit-media-controls-timeline {
+    background-color: $brainflix-darkblack;
+    opacity: 50%;
 }

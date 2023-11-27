@@ -1,0 +1,17 @@
+@import './breakpoints';
+@import './mixins';
+@import './typography';
+@import './variables';
+
+.video-description {
+    font-size: 0.8125rem;
+    font-family: 'Avenir-Next-Regular';
+
+    @include tablet {
+        font-size: 0.875rem;
+    }
+
+    @include desktop {
+        font-size: 0.875rem;
+    }
+}

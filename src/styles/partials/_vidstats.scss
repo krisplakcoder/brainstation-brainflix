@@ -1,5 +1,6 @@
-@import 'variables';
-
+@import './variables';
+@import './mixins';
+@import './typography';
 
 .vid-stats__container {
 
@@ -9,6 +10,7 @@
     color: $mercury;
     border-top: 1px solid $mercury;
     border-bottom: 1px solid $mercury;
+    font-family: 'Avenir-Next-Regular'
 }
 
 .vid-stats {
@@ -19,7 +21,7 @@
 
     &--bold {
         font-weight: 700;
-        color: black;
+        color: $brainflix-darkblack;
     }
 }
 

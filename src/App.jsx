@@ -36,13 +36,17 @@ function App() {
     return video.id !== selectedVideo.id;
   })
 
-  
+  function dateConvertor(date) {
+    let newDate = new Date(date);
+    return newDate.toDateString();
+}
+
   // const UpdateVideoList = inactiveVideos.map((element) => (VideoList(element.image, element.title, element.channel)));
 
   return (
     <>
       <Header />
-      <Video image={selectedVideo.image} title={selectedVideo.title} />
+      <Video image={selectedVideo.image} title={selectedVideo.title} video={selectedVideo.video}/>
       <VideoStats author={selectedVideo.channel} date={selectedVideo.timestamp} viewCount={selectedVideo.views} likes={selectedVideo.likes}/>
       <Description text={selectedVideo.description}/>
       <Comment commentArray={selectedVideo.comments}/>
