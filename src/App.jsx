@@ -38,10 +38,10 @@ function App() {
   return (
     <>
       <Header />
-      <Video image={selectedVideo.image} title={selectedVideo.title} video={selectedVideo.video}/>
+      <Video image={selectedVideo.image} video={selectedVideo.video}/>
       <div className="video-section">
         <div className="video-section__details">
-          <VideoStats author={selectedVideo.channel} date={selectedVideo.timestamp} viewCount={selectedVideo.views} likes={selectedVideo.likes}/>
+          <VideoStats author={selectedVideo.channel} date={selectedVideo.timestamp} title={selectedVideo.title}  viewCount={selectedVideo.views} likes={selectedVideo.likes}/>
           <Description text={selectedVideo.description}/>
           <Comment commentArray={selectedVideo.comments}/>
           <CommentSection commentArray={selectedVideo.comments} />

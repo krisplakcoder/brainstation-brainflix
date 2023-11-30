@@ -21,10 +21,8 @@
     }
 
     @include desktop {
-        width: 59%;
-        padding-left: 13rem;
-        justify-content: space-between;
-        align-items: center;
+        display: flex;
+        justify-content: start;
         margin-right: 0;
     }
 
@@ -36,8 +34,7 @@
         }
         
         @include desktop {
-            padding-top: 2rem;
-            padding-left: 4rem;
+            
         }
     }
 
@@ -107,12 +104,18 @@
                 width: 100%;
                 padding-right: 1rem;
                 padding-top: 0.5rem;
+                display: flex;
+                flex-direction: column;
             }
         }
         &-label {
             color: $mercury;
             font-size: 0.875rem;
             padding-bottom: 1rem;
+
+            @include desktop {
+                padding-bottom: 0.5rem;
+            }
         }
         &-box {
             box-sizing: border-box;
@@ -122,6 +125,7 @@
             border-radius: 4px;
             @include border-styling;
             outline: none;
+            max-width: 600px;
 
             @include tablet {
                 height: 40px;
