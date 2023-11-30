@@ -1,7 +1,8 @@
-@import './breakpoints';
-@import './mixins';
-@import './typography';
-@import './variables';
+@import "../../styles/partials/breakpoints";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/typography";
+
 
 .video-description {
     font-size: 0.8125rem;

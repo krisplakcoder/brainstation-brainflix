@@ -1,7 +1,7 @@
-@import './variables';
-@import './typography';
-@import 'breakpoints';
-@import './mixins';
+@import "../../styles/partials/breakpoints";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/typography";
 
 .navbar {
     display: flex;

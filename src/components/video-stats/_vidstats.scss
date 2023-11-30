@@ -1,7 +1,8 @@
-@import './variables';
-@import './mixins';
-@import './typography';
-@import './breakpoints';
+@import "../../styles/partials/breakpoints";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/typography";
+
 
 .vid-stats__container {
 
