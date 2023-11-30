@@ -31,4 +31,8 @@ dist-ssr
 *.scss.map
 
 README.md
-vite.config.js
+# vite.config.js
+
+.eslintrc
+
+index.css
