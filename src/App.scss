@@ -1,10 +1,10 @@
-@import './styles/partials/header';
-@import './styles/partials/vidstats';
-@import './styles/partials/video';
-@import './styles/partials/comment';
-@import './styles/partials/comments-section';
-@import './styles/partials/video-list';
-@import './styles/partials/description';
+@import './components/header/header';
+@import './components/video-stats/vidstats';
+@import './components/video-player/video';
+@import './components/video-description/description';
+@import './components/commentSection/comments-section';
+@import './components/comment/comment';
+@import './components/video-list/video-list';
 @import './styles/partials/typography';
 
 @font-face{
@@ -20,3 +20,17 @@ body {
 }
 
 
+.video-section {
+
+    border: 1px solid blue;
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    &__details {
+        border: 1px solid red;
+    }
+}

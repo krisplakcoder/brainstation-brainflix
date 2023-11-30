@@ -8,7 +8,7 @@ import Description from './components/video-description/description'
 import Comment from './components/comment/comment'
 import CommentSection from './components/commentSection/commentSection'
 import VideoStats from './components/video-stats/stats'
-import './App.css'
+import './App.scss'
 
 
 function App() {
@@ -39,11 +39,15 @@ function App() {
     <>
       <Header />
       <Video image={selectedVideo.image} title={selectedVideo.title} video={selectedVideo.video}/>
-      <VideoStats author={selectedVideo.channel} date={selectedVideo.timestamp} viewCount={selectedVideo.views} likes={selectedVideo.likes}/>
-      <Description text={selectedVideo.description}/>
-      <Comment commentArray={selectedVideo.comments}/>
-      <CommentSection commentArray={selectedVideo.comments} />
+      <div className="video-section">
+        <div className="video-section__details">
+          <VideoStats author={selectedVideo.channel} date={selectedVideo.timestamp} viewCount={selectedVideo.views} likes={selectedVideo.likes}/>
+          <Description text={selectedVideo.description}/>
+          <Comment commentArray={selectedVideo.comments}/>
+          <CommentSection commentArray={selectedVideo.comments} />
+        </div>
       <VideoList newVideoArray={inactiveVideos} changeOnClick={changeVideo} />
+      </div>
 
     </>
   )
