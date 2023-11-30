@@ -34,5 +34,5 @@ README.md
 # vite.config.js
 
 .eslintrc
-
 index.css
+*.css
