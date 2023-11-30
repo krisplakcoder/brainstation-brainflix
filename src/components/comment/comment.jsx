@@ -1,5 +1,5 @@
 import avatar from '../../assets/images/Mohan-muruge.jpg'
-import CommentIcon from '../../assets/Icons/add_comment.svg'
+import CommentIcon from '../../assets/images/add_comment.svg'
 export default function Comment( {commentArray}) {
 
     let count = 0;
@@ -19,7 +19,7 @@ export default function Comment( {commentArray}) {
                     <form className="comment__form">
                         <div className="comment__form--position"><label className="comment__form-label" for = "comment-box">Join The Conversation</label>
                         <textarea className="comment__form-box" typeof="text" id="comment-box" name="comment-box">Add a new comment</textarea></div>
-                        <button className="comment__form-button" type="submit" value="submit"><img className="commentIcon" src={CommentIcon}/>Comment</button>
+                        <button disabled={true} className="comment__form-button" type="submit" value="submit"><img className="commentIcon" src={CommentIcon}/>Comment</button>
                     </form>
                 </div>
             </section>

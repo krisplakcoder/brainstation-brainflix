@@ -1,5 +1,5 @@
-import LikesIcon from "../../assets/Icons/likes.svg"
-import ViewsIcon from "../../assets/Icons/views.svg"
+import LikesIcon from "../../assets/images/likes.svg"
+import ViewsIcon from "../../assets/images/views.svg"
 
 export default function VideoStats({author, date, viewCount, likes}) {
 

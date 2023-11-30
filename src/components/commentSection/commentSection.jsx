@@ -8,7 +8,7 @@ export default function CommentSection( {commentArray} ) {
           
         commentArray.map((videoComments) => {
             return (
-                <section className="comment-section">
+                <section key={videoComments.id} className="comment-section">
                     <div className="comment-section__image-container">
                     <div className="comment-section__image"></div>
                     </div>

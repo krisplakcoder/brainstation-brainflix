@@ -1,6 +1,6 @@
 import logo from '../../assets/images/BrainFlix-logo.svg';
 import avatar from '../../assets/images/Mohan-muruge.jpg';
-import UploadImage from '../../assets/Icons/upload.svg'
+import UploadImage from '../../assets/images/upload.svg'
 
 export default function Header() {
 
@@ -14,7 +14,7 @@ export default function Header() {
             <button className='upload-button upload-button--desktop'><img className="upload-icon" src={UploadImage} alt="upload image"/>Upload</button>
             <img className='user-avatar' src={avatar} alt='avatar'></img></div>
         </div>
-        <button className='upload-button upload-button--mobile'><img className="upload-icon" src={UploadImage} alt="upload image"/>Upload</button>
+        <button disabled={true} className='upload-button upload-button--mobile'><img className="upload-icon" src={UploadImage} alt="upload image"/>Upload</button>
     </header>
     
     );
