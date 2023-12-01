@@ -46,7 +46,9 @@ function App() {
           <Comment commentArray={selectedVideo.comments}/>
           <CommentSection commentArray={selectedVideo.comments} />
         </div>
-      <VideoList newVideoArray={inactiveVideos} changeOnClick={changeVideo} />
+        <div className='video-section-list'>
+          <VideoList newVideoArray={inactiveVideos} changeOnClick={changeVideo} />
+          </div>
       </div>
 
     </>

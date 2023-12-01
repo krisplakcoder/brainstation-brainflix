@@ -30,20 +30,7 @@
         }
     }
 
-    &__title {
-        font-size: 1.5rem;
-        font-family: "Avenir-Bold";
-        
-        @include tablet {
-            font-size: $desktop-headersize;
-        }
 
-        @include desktop {
-            font-size: $desktop-headersize;
-            padding: 1rem 0em 1rem 2em;
-            margin: 0;
-        }
-    }
 }
 
 video::-webkit-media-controls-timeline {

@@ -10,6 +10,7 @@ export default function Comment( {commentArray}) {
 
     return (
         <>
+            <div className="comment-section--flex">
             <div className="comment-numbers">{count} Comments</div>
             <section className="comment">
                 <div className="comment__image-container">
@@ -23,6 +24,7 @@ export default function Comment( {commentArray}) {
                     </form>
                 </div>
             </section>
+            </div>
         </>
     )
     count = 0;

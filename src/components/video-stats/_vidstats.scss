@@ -4,6 +4,13 @@
 @import "../../styles/partials/typography";
 
 
+.vid-stats-section {
+
+    @include desktop {
+        width: 100%;
+        padding-top: 1rem;
+    }
+}
 .vid-stats__container {
 
     display: flex;
@@ -20,10 +27,7 @@
     }
 
     @include desktop {
-        border-top: none;
-        width: 66%;
-        padding-left: 4rem;
-        padding-right: 1rem;
+        border: none;
         margin: 0;
         justify-content: space-between;
     }
@@ -48,7 +52,7 @@
 
         @include desktop {
             margin: 0;
-
+            width: 100%;
         }
     }
 
@@ -71,7 +75,7 @@
     }
 
     &--bold {
-        font-weight: 700;
+        font-family: "Avenir-Bold";
         color: $brainflix-darkblack;
         font-size: 0.8125rem;
 
@@ -81,7 +85,7 @@
         }
 
         @include desktop {
-            font-size: 1.25rem;
+            font-size: 1rem;
             margin: 0;
         }
     }
@@ -90,5 +94,19 @@
         margin-right: 0.5rem;
     }
 
+}
+
+.video__title {
+    font-size: 1.5rem;
+    font-family: "Avenir-Bold";
+    
+    @include tablet {
+        font-size: $desktop-headersize;
+    }
+
+    @include desktop {
+        font-size: $desktop-headersize;
+        margin: 0;
+    }
 }
 

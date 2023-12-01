@@ -9,3 +9,10 @@
     background-color: $brainflix-blue;
     color: $white;
 }
+
+@mixin flex-row-styling {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+}

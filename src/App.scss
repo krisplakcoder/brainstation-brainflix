@@ -22,18 +22,18 @@ body {
     margin: 0;
     padding: 0 1rem;
     font-family: "Avenir-Regular";
+    
 }
 
 
 .video-section {
 
-    border: 1px solid blue;
-
     @include desktop {
         display: flex;
         flex-direction: row;
-        justify-content: end;
-        width: 100%;
+        margin: 0 auto;
+        width: 90%;
+        
     }
 
     &__details {
@@ -43,6 +43,14 @@ body {
         flex-direction: column;
         align-items: end;
         border-right: 1px solid $mercury;
+        padding-left:15rem;
+        width: 100%;
+        }
+    }
+
+    &-list {
+        @include desktop {
+            width: 50%;
         }
     }
 }
