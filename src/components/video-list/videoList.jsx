@@ -1,6 +1,6 @@
 
 
-export default function VideoList({newVideoArray, changeOnClick}) {
+export default function VideoList({newVideoArray }) {
 
     function videoClick(event, id) {
         event.preventDefault();
