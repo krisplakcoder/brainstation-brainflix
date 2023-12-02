@@ -10,6 +10,8 @@ import CommentSection from './components/commentSection/commentSection'
 import VideoStats from './components/video-stats/stats'
 import './App.scss'
 
+const API_KEY = {"api_key" :"6f9a4b62-b1e4-452c-a341-a5c386ba05d2"};
+const URL_REQUEST = "?api_key=6f9a4b62-b1e4-452c-a341-a5c386ba05d2";
 
 function App() {
 
@@ -48,7 +50,7 @@ function App() {
         </div>
         <div className='video-section-list'>
           <VideoList newVideoArray={inactiveVideos} changeOnClick={changeVideo} />
-          </div>
+        </div>
       </div>
 
     </>
