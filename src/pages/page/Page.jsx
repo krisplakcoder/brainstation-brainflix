@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
-import Header from '../../components/header/header'
 import VideoList from '../../components/video-list/videoList'
 import Video from '../../components/video-player/video'
 import Description from '../../components/video-description/description'
@@ -23,10 +22,20 @@ function Upload() {
   )
 }
 
-function Page({pageVideoID}) {
+
+function Page({ videoArray }) {
   
- 
-  console.log("video id: ", pageVideoID);
+  let pageVideoID = " ";
+
+  let { videoId } = useParams();
+
+  if (videoId == videoArray[0].id || videoId == "/" || videoId == undefined) {
+    pageVideoID = videoArray[0].id;
+  } else { pageVideoID = videoId};
+
+  console.log("page video id: ", pageVideoID);
+  console.log("videoId is: ", videoId);
+
 
   const [selectedVideo, getSelectedVideo] = useState();
 
@@ -37,6 +46,7 @@ function Page({pageVideoID}) {
       getSelectedVideo(response.data);} catch(error) {console.log(error)};
     }; fetchVideo();
   },[pageVideoID])
+
   
   return (
     <>
@@ -52,7 +62,7 @@ function Page({pageVideoID}) {
           <CommentSection commentArray={selectedVideo.comments}/>      
         </div>  
          <div className='video-section-list'>
-          <VideoList videoID={selectedVideo.id} />
+          <VideoList videoID={selectedVideo.id} array={videoArray} />
         </div>  
       </div>    
       </> )}

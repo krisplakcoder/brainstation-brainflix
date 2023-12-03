@@ -15,7 +15,7 @@ function App() {
 
   const [videoList, setVideoList] = useState();
 
-  useEffect(() => {
+   useEffect(() => {
     const fetchList = async () => {
       try {const response = await axios.get(REQUEST_VIDEOS);
         setVideoList(response.data);
@@ -23,22 +23,16 @@ function App() {
       }; fetchList();
   }, [])
 
-  let { videoID } = useParams();
-  
-  console.log("videoID from Params: ", videoID);
-
-  {videoList && console.log(videoList[0].id)};
   
   return (
-
     <>
       <BrowserRouter>
         <Header>
-          <Routes> 
+          <Routes>
             { videoList && ( <>
-            <Route path="/" element={<Page pageVideoID={videoList[0].id}/>} />
-            <Route path="/upload" element={<Upload />}/> </> ) }
-            <Route path="video/:videoId" element={<Page pageVideoID={videoID}/>} />
+            <Route exact path="/" element={<Page videoArray={videoList}/>} />
+            <Route path="/upload" element={<Upload />}/> 
+            <Route path="/video/:videoId" element={<Page videoArray={videoList}/>}/> </>)}
           </Routes>
         </Header>
       </BrowserRouter>
