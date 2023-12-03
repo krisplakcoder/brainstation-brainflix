@@ -28,7 +28,7 @@ export default function VideoList({videoID}) {
             {
                 videoList.map((video) => {
                     return (
-                        <Link to={`/video/${video.id}`} key={video.id} onClick={(event) => {videoClick(event, video.id);}}>
+                        <Link to={`/video/${video.id}`} key={video.id} className="video-list--link-style">
                             <div  className="video-list__container">                                
                                 <div className="video-list__image">
                                     <img src={video.image} alt="next video" className="next-video__image" />
