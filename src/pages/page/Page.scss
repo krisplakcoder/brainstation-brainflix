@@ -1,0 +1,56 @@
+@import '../../components/header/header';
+@import '../../components/video-stats/vidstats';
+@import '../../components/video-player/video';
+@import '../../components/video-description/description';
+@import '../../components/commentSection/comments-section';
+@import '../../components/comment/comment';
+@import '../../components/video-list/video-list';
+@import '../../styles/partials/typography';
+
+@font-face{
+    font-family: "Avenir-Regular";
+    src: url("./assets/fonts/AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+    font-family: "Avenir-Bold";
+    src: url("././assets/fonts/AvenirNextLTPro-Bold.otf")
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 1rem;
+    font-family: "Avenir-Regular";
+    
+}
+
+
+.video-section {
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        width: 90%;
+        
+    }
+
+    &__details {
+
+        @include desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        border-right: 1px solid $mercury;
+        padding-left:15rem;
+        width: 100%;
+        }
+    }
+
+    &-list {
+        @include desktop {
+            width: 50%;
+        }
+    }
+}

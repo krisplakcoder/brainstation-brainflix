@@ -1,17 +1,19 @@
 import avatar from '../../assets/images/Mohan-muruge.jpg'
 import CommentIcon from '../../assets/images/add_comment.svg'
+
 export default function Comment( {commentArray}) {
 
-    let count = 0;
+    // let count = 0;
 
-    for(let i = 0; i < commentArray.length; i++) {
-        count += 1;
-    }
+    // for (let i = 0; i < commentArray.length; i++) {
+    //     count += 1;
+    // }
+    console.log("comment array:", commentArray);
 
     return (
         <>
             <div className="comment-section--flex">
-            <div className="comment-numbers">{count} Comments</div>
+            <div className="comment-numbers">{commentArray.length} Comments</div>
             <section className="comment">
                 <div className="comment__image-container">
                     <img className="comment__image" src={avatar} alt="avatar image"></img>

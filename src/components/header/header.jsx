@@ -10,7 +10,7 @@ export default function Header(props) {
     <header className = "navbar">
         <img className = "navbar__img navbar__img--mobile" src={logo} alt='brainflix logo' />
         <div className = "navbar__search">
-            <img className = "navbar__img navbar__img--desktop" src={logo} alt='brainflix logo' />
+            <Link to="/" ><img className = "navbar__img navbar__img--desktop" src={logo} alt='brainflix logo' /></Link>
             <div className="navbar__search--space"><input type='search' placeholder='Search..' className='navbar__searchbar'></input>
             <Link to="upload" className='upload-button upload-button--desktop'><img className="upload-icon" src={UploadImage} alt="upload image"/>Upload</Link>
             <img className='user-avatar' src={avatar} alt='avatar'></img></div>

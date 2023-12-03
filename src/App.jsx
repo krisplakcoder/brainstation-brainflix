@@ -1,23 +1,36 @@
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
-import {Home, Upload} from './pages/page/Page';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import {Page, Upload} from './pages/page/Page';
 import Header from './components/header/header';
 import './App.scss'
 
-const API_KEY = {"api_key" :"6f9a4b62-b1e4-452c-a341-a5c386ba05d2"};
-const URL_REQUEST = "?api_key=6f9a4b62-b1e4-452c-a341-a5c386ba05d2";
-
 
 function App() {
+  console.clear();
 
+  const homeID = "84e96018-4022-434e-80bf-000ce4cd12b8";
+  const URL_REQUEST = "?api_key=6f9a4b62-b1e4-452c-a341-a5c386ba05d2";
+  const REQUEST_HOME_VIDEO = "https://project-2-api.herokuapp.com" + "/videos/" + homeID + "/" + URL_REQUEST;
+
+  const [state, setState] = useState();
+
+  useEffect(() => {
+    const fetchVideo = async () => {
+      try {const response = await axios.get(REQUEST_HOME_VIDEO);
+      setState(response.data);} catch(error) {console.log(error)};
+    }; fetchVideo();
+  }, [])
+  
   return (
 
     <>
       <BrowserRouter>
         <Header>
           <Routes> 
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Page selectedVideo={state}/>} />
             <Route path="/upload" element={<Upload />} />
-            <Route path="/video/:videoID" />
+            <Route path="/video/:videoID" element={<Page />}/>
           </Routes>
         </Header>
       </BrowserRouter>
@@ -27,59 +40,4 @@ function App() {
 }
 
 export default App
-
-// import { useState } from 'react'
-// import videos from './data/videos.json'
-// import VideoDetails from './data/video-details.json'
-// import Header from './components/header/header'
-// import VideoList from './components/video-list/videoList'
-// import Video from './components/video-player/video'
-// import Description from './components/video-description/description'
-// import Comment from './components/comment/comment'
-// import CommentSection from './components/commentSection/commentSection'
-// import VideoStats from './components/video-stats/stats'
-
-// function App() {
-
-
-//   const [selectedVideo, setSelectedVideo] = useState(VideoDetails[0])
-
-  
-
-//   function changeVideo(videoID) {
-//     const newSelectedVideo = VideoDetails.find((video) => {
-//       return video.id === videoID;
-//     })
-//     setSelectedVideo(newSelectedVideo);
-//   }
-
-//   const inactiveVideos = videos.filter((video) => {
-//     return video.id !== selectedVideo.id;
-//   })
-
-//   function dateConvertor(date) {
-//     let newDate = new Date(date);
-//     return newDate.toDateString();
-// }
-
-
-//   return (
-//     <>
-//       <Header />
-//       <Video image={selectedVideo.image} video={selectedVideo.video}/>
-//       <div className="video-section">
-//         <div className="video-section__details">
-//           <VideoStats author={selectedVideo.channel} date={selectedVideo.timestamp} title={selectedVideo.title}  viewCount={selectedVideo.views} likes={selectedVideo.likes}/>
-//           <Description text={selectedVideo.description}/>
-//           <Comment commentArray={selectedVideo.comments}/>
-//           <CommentSection commentArray={selectedVideo.comments} />
-//         </div>
-//         <div className='video-section-list'>
-//           <VideoList newVideoArray={inactiveVideos} changeOnClick={changeVideo} />
-//         </div>
-//       </div>
-
-//     </>
-//   )
-// }
 
