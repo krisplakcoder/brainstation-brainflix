@@ -5,16 +5,34 @@
 
 .upload {
 
-    display: flex;
-    flex-direction: column;
+    @include flex-column-styling;
     box-sizing: border-box;
     border: 1px solid red;
     border-top: 2px solid $mercury;
+
+    &-title {
+        font-family: "Avenir-Bold";
+        font-weight: 300;
+    }
     
     &__form {
 
-        display: flex;
-        flex-direction: column;
+        &-thumbnail {
+
+            @include flex-column-styling;
+
+            &-image {
+                object-fit: contain;
+                width: 100%;
+                border-radius: 4px;
+                padding-top: 0.5rem;
+            }
+        }
+
+        &-container {
+            @include flex-column-styling;
+            width: 100%;
+        }
     }
 
 
@@ -22,5 +40,7 @@
 
 .form-label {
     color: $mercury;
-    text-size: 0.8125rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }

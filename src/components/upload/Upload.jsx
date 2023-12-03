@@ -19,7 +19,7 @@ export default function Upload() {
                 </div>
                 <form className="upload__form-container" onSubmit={submitHandler}>
                     <div className="upload__form-title-container">
-                        <label className="form-title-label form label">Title Your Video</label>
+                        <label className="form-title-label form-label">Title Your Video</label>
                         <input type="text" placeholder="Add a title to  your video" />
                     </div>
                     <div className="upload__form-vid-description-container">
