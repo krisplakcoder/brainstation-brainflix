@@ -2,3 +2,25 @@
 @import "../../styles/partials/variables";
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/typography";
+
+.upload {
+
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid red;
+    border-top: 2px solid $mercury;
+    
+    &__form {
+
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+
+.form-label {
+    color: $mercury;
+    text-size: 0.8125rem;
+}

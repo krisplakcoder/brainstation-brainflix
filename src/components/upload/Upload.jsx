@@ -1,4 +1,5 @@
 import PublishIcon from '../../assets/images/publish.svg';
+import ThumbnailImage from '../../assets/images/Upload-video-preview.jpg';
 import { Link } from 'react-router-dom';
 
 export default function Upload() {
@@ -10,16 +11,19 @@ export default function Upload() {
     return (
 
         <section className="upload">
-            <h1 className="upload-title">Upload Page</h1>
+            <h1 className="upload-title">Upload Video</h1>
             <section className="upload__form">
-                <div className="upload__form-thumbnail"></div>
+                <div className="upload__form-thumbnail">
+                    <label className="upload__form-thumbnail-label form-label">Video Thumbnail</label>
+                    <img src={ThumbnailImage} alt='thumbnail' className='upload__form-thumbnail-image'/>
+                </div>
                 <form className="upload__form-container" onSubmit={submitHandler}>
                     <div className="upload__form-title-container">
-                        <label className="form-title-label">Title Your Video</label>
+                        <label className="form-title-label form label">Title Your Video</label>
                         <input type="text" placeholder="Add a title to  your video" />
                     </div>
                     <div className="upload__form-vid-description-container">
-                        <label value={"videoDescription"} className="form-vid-description-label">Add a video description</label>
+                        <label value={"videoDescription"} className="form-vid-description-label form-label">Add a video description</label>
                         <textarea name="Video Description" placeholder="Add a description to your video" />
                     </div>
                     <div className="upload__form-buttons">
