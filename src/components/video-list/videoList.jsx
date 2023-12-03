@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const URL_REQUEST = "?api_key=6f9a4b62-b1e4-452c-a341-a5c386ba05d2";
@@ -7,17 +8,18 @@ const REQUEST_VIDEOS = "https://project-2-api.herokuapp.com" + "/videos/" + URL_
 
 export default function VideoList({videoID}) {
 
-   const [videoList, setVideoList] = useState();
+    const [videoList, setVideoList] = useState();
 
-   useEffect(() => {
-    const getVideoList = async () => {
-        try {const response = await axios.get(REQUEST_VIDEOS);
-            console.log("video list: ", response.data);
-        setVideoList(response.data.filter((video) => {
-            return video.id !== videoID;
-        }))} catch(error) {console.log(error)}
-    }; getVideoList();
-   },[])
+    useEffect(() => {
+        const getVideoList = async () => {
+            try {const response = await axios.get(REQUEST_VIDEOS);
+                console.log("video list: ", response.data);
+            setVideoList(response.data.filter((video) => {
+                return video.id !== videoID;
+            }))} catch(error) {console.log(error)}
+        }; getVideoList();
+    },[]);
+
 
     return (
         <>
@@ -44,3 +46,4 @@ export default function VideoList({videoID}) {
         </>
     )    
 }
+
