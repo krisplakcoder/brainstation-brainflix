@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import {Page, Upload} from './pages/page/Page';
+import Page from './pages/page/Page';
+import Upload from './components/upload/Upload';
 import Header from './components/header/header';
 import './App.scss'
 

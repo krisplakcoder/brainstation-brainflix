@@ -13,17 +13,8 @@ import './Page.scss'
 const URL_REQUEST = "?api_key=6f9a4b62-b1e4-452c-a341-a5c386ba05d2";
 // const REQUEST_HOME_VIDEO = "https://project-2-api.herokuapp.com" + "/videos/" + homeID + "/" + URL_REQUEST;
 
-function Upload() {
 
-  return (
-    <>
-    <h1>Hello</h1>
-    </>
-  )
-}
-
-
-function Page({ videoArray }) {
+export default function Page({ videoArray }) {
   
   let pageVideoID = " ";
 
@@ -71,7 +62,6 @@ function Page({ videoArray }) {
 
 }
 
-export {Page, Upload} ;
 
  {/* // const [selectedVideo, setSelectedVideo] = useState(VideoDetails[0])
 
