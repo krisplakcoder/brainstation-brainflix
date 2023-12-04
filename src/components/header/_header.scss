@@ -4,12 +4,12 @@
 @import "../../styles/partials/typography";
 
 .navbar {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+    padding: 1rem;
     font-family: 'Avenir-Next-Regular';
 
     @include tablet {

@@ -8,6 +8,7 @@
     @include flex-column-styling;
     box-sizing: border-box;
     border-top: 1px solid $mercury;
+    padding: 0 1rem;
 
     @include tablet {
         padding: 0 2rem;
