@@ -1,3 +1,5 @@
+@import './breakpoints';
+@import './variables';
 
 @mixin border-styling {
     border: 1px solid $mercury;
@@ -20,4 +22,26 @@
 @mixin flex-column-styling {
     display: flex;
     flex-direction: column;
+}
+
+@mixin form-size {
+
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 12px;
+    outline: none;
+    border: 1px solid $mercury;
+    margin: 0;
+
+    @include mobile {
+        min-height: 36px;
+        max-height: 40px;
+        max-width: inherit;
+        width: 100%;
+    }
+
+    @include tablet {
+        min-height: 40px;
+        padding: 16px;
+    }
 }

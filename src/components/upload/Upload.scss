@@ -7,7 +7,6 @@
 
     @include flex-column-styling;
     box-sizing: border-box;
-    border: 1px solid red;
     border-top: 2px solid $mercury;
 
     &-title {
@@ -32,10 +31,47 @@
         &-container {
             @include flex-column-styling;
             width: 100%;
+            height: auto;
+            padding-top: 0.5rem;
         }
+
+        &-title-container {
+            @extend .upload__form-container;
+            height: fit-content;
+            max-width: 500px;
+        }
+
+        &-vid-description-container{
+            @include flex-column-styling;
+            padding-top: 1rem;
+        }
+
+        &-buttons {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+       
     }
 
+}
 
+.form__title-input {
+   @include form-size;
+    background-color: $alabaster;
+
+    &::placeholder {
+        color: $brainflix-black;
+        font-weight: 700;
+
+    }
+    &:focus {
+        border: 2px solid $brainflix-blue;
+    }
+
+    &-box {
+        // border: 1px solid red;
+    }
 }
 
 .form-label {
@@ -43,4 +79,34 @@
     font-size: 0.8125rem;
     font-weight: 700;
     text-transform: uppercase;
+    padding-bottom: 0.5rem;
+}
+
+.form-vid-description-input {
+
+    box-sizing: border-box;
+    border: 1px solid $mercury;
+    background-color: $alabaster;
+    padding: 12px;
+    height: 120px;
+    width: 100%;
+    max-height: 150px;    
+    outline: none;
+
+    &::placeholder {
+        color: $brainflix-black;
+        font-weight: 700;
+
+    }
+
+    &:focus {
+        border: 2px solid $brainflix-blue;
+    }
+    &-box {
+        max-height: auto;
+        height: fit-content;
+        margin: 0;
+        width: 100%;
+    }
+
 }
