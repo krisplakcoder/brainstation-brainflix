@@ -13,8 +13,8 @@
     font-family: 'Avenir-Next-Regular';
 
     @include tablet {
-        padding: 1rem 0rem;
-        height: auto
+        padding: 1rem 1.0rem;
+        height: auto;
     }
   
 
@@ -91,6 +91,7 @@
         width: 80%;
         border: 1px solid $mercury;
         border-radius: 4px;
+        background-color: $alabaster;
         outline: none;
 
             &:focus {
