@@ -12,10 +12,16 @@ export default function Header(props) {
         <div className = "navbar__search">
             <Link to="/" ><img className = "navbar__img navbar__img--desktop" src={logo} alt='brainflix logo' /></Link>
             <div className="navbar__search--space"><input type='search' placeholder='Search..' className='navbar__searchbar'></input>
-            <Link to="upload" className='upload-button upload-button--desktop'><img className="upload-icon" src={UploadImage} alt="upload image"/>Upload</Link>
+            <Link to="upload" className='upload-button upload-button--desktop'>
+                <img className="upload-icon" src={UploadImage} alt="upload image"/>
+                <span className='upload-button--text'>Upload</span>
+            </Link>
             <img className='user-avatar' src={avatar} alt='avatar'></img></div>
         </div>
-        <Link to="upload" className='upload-button upload-button--mobile'><img className="upload-icon" src={UploadImage} alt="upload image"/>Upload</Link>
+        <Link to="upload" className='upload-button upload-button--mobile'>
+            <img className="upload-icon" src={UploadImage} alt="upload image"/>
+            <span className='upload-button--text'>Upload</span>
+        </Link>
     </header>
     {props.children}
     </>

@@ -128,27 +128,31 @@
     }
 }
 
+.upload-icon {
+    position: absolute;
+    left: 0;
+    padding-left: 0.5rem;
+}
+
 .upload-button {
 
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Avenir-Regular";
     height: 40px;
     width: 100%;
     background-color: $brainflix-blue;
     border: none;
     border-radius: 4px;
     color: $white;
+    position: relative;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 40%;
-
-    @include tablet {
-        gap:20%;
-    }
-
-    @include desktop {
-        gap:20%;
-    }
     
+
+       
     &:hover {
         background-color: $brainflix-darkblue;
     }

@@ -27,7 +27,7 @@ export default function Upload() {
                         <div className="form-vid-description-input-box"><textarea className="form-vid-description-input" name="Video Description" placeholder="Add a description to your video" /></div>
                     </div>
                     <div className="upload__form-buttons">
-                        <Link to="/"><div className="upload__form-cancel">Cancel</div></Link>
+                        <Link to="/" className='upload__form-cancel--styling'><div className="upload__form-cancel">Cancel</div></Link>
                         <button className="upload__form-publish">
                             <img src={PublishIcon} className='publish-icon' alt='publish icon' />
                             <span className="publish-cta">Publish</span>
