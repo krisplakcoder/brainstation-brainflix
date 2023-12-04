@@ -35,14 +35,3 @@ export default function VideoList({videoID, array}) {
     )    
 }
 
-// key={video.id}
-// const [videoList, setVideoList] = useState();
-// useEffect(() => {
-//     const getVideoList = async () => {
-//         try {const response = await axios.get(REQUEST_VIDEOS);
-//             console.log("video list: ", response.data);
-//         setVideoList(response.data.filter((video) => {
-//             return video.id !== videoID;
-//         }))} catch(error) {console.log(error)}
-//     }; getVideoList();
-// },[])

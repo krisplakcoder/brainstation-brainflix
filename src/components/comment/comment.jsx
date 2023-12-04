@@ -3,11 +3,6 @@ import CommentIcon from '../../assets/images/add_comment.svg'
 
 export default function Comment( {commentArray}) {
 
-    // let count = 0;
-
-    // for (let i = 0; i < commentArray.length; i++) {
-    //     count += 1;
-    // }
     console.log("comment array:", commentArray);
 
     return (

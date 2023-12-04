@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Page from './pages/page/Page';
