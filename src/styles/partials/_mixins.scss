@@ -45,3 +45,11 @@
         padding: 16px;
     }
 }
+
+@mixin upload-form-title-desktop {
+    font-size: 2.125rem;
+    padding: 2rem 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid $mercury;
+    margin: 0;
+}

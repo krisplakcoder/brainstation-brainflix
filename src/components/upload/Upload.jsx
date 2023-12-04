@@ -26,7 +26,7 @@ export default function Upload() {
                         <label value={"videoDescription"} className="form-vid-description-label form-label">Add a video description</label>
                         <div className="form-vid-description-input-box"><textarea className="form-vid-description-input" name="Video Description" placeholder="Add a description to your video" /></div>
                     </div>
-                    <div className="upload__form-buttons">
+                    <div className="upload__form-buttons buttons--mobile-tablet-display">
                         <Link to="/" className='upload__form-cancel--styling'><div className="upload__form-cancel">Cancel</div></Link>
                         <button className="upload__form-publish">
                             <img src={PublishIcon} className='publish-icon' alt='publish icon' />
@@ -35,6 +35,13 @@ export default function Upload() {
                     </div>
                 </form>
             </section>
+            <div className="upload__form-buttons buttons--desktop-display">
+                <Link to="/" className='upload__form-cancel--styling'><div className="upload__form-cancel">Cancel</div></Link>
+                <button className="upload__form-publish">
+                    <img src={PublishIcon} className='publish-icon' alt='publish icon' />
+                    <span className="publish-cta">Publish</span>
+                </button>
+            </div>
         </section>
     )
 }
