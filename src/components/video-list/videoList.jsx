@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+const HOME_URL = "http://localhost:8080";
+
 
 export default function VideoList({videoID, array}) {
 
@@ -21,7 +23,7 @@ export default function VideoList({videoID, array}) {
                         
                             <div  className="video-list__container">                                
                                 <div className="video-list__image">
-                                    <img src={video.image} alt="next video" className="next-video__image" />
+                                    <img src={HOME_URL+video.image} alt="next video" className="next-video__image" />
                                 </div>
                                 <div className="next-video__details">
                                     <div className="next-video__details-title">{video.title}</div>
