@@ -8,9 +8,10 @@ const HOME_URL = "http://localhost:8080";
 const commentHolder = {comment: ""};
 
 export default function Comment( {commentArray} ) {
-    const navigate = useNavigate();
-    const {videoID} = useParams();
+    let { videoId } = useParams();
 
+    console.log("videoID in comment is: ", videoId);
+    const navigate = useNavigate();
     // console.log("comment array:", commentArray);
 
     const [values, setValues] = useState(commentHolder);
@@ -29,10 +30,10 @@ export default function Comment( {commentArray} ) {
             alert("please enter a comment");
         } else { 
             console.log(values);
-            axios.post((HOME_URL+"/videos/"+videoID+"/comments"), values).then((response => {console.log(response.status)}));
+            axios.post((HOME_URL+"/videos/"+videoId+"/comments"), values).then((response => {console.log(response.status)}));
             alert("Your comment has been uploaded");
-            return navigate("/");
-
+            window.location.reload();
+            
         }
     };
 
