@@ -15,6 +15,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     max-width: 100%;
+    box-sizing: border-box;
     height: auto;
     margin: 0rem;
     padding: 1rem 1rem;
@@ -61,12 +62,13 @@
             }
 
             @include desktop {
-                padding-top: 1.5rem;
+                padding-top: 2rem;
             }
         }
     }
 
     &__container {
+
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -78,12 +80,14 @@
 
         @include desktop{
             width: 100%;
+            align-items: end;
         }
     }
 
     &__form {
         max-width: 1000px;
         width: 100%;
+        box-sizing: border-box;
 
         @include tablet {
             width: 100%;
@@ -95,6 +99,7 @@
 
         @include desktop {
             @include flex-row-styling;
+            align-items: end;
         }
 
         &--position {
@@ -109,6 +114,7 @@
                 display: flex;
                 flex-direction: column;
                 width: 100%;
+                align-items: start;
             }
         }
 
@@ -140,6 +146,7 @@
             @include desktop {
                 height: 40px;
                 max-width: 1000px;
+
             }
 
             &:focus {
@@ -156,6 +163,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-evenly;
+            
 
             @include tablet {
                 height: 40px;
@@ -166,7 +174,7 @@
             @include desktop {
                 height: 40px;
                 width: 150px;
-                margin-top: 1.75rem;
+                margin: 0;
             }
 
             &:hover {
