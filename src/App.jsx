@@ -14,7 +14,7 @@ function App() {
   const REQUEST_VIDEOS = HOME_URL + "/videos";
 
 
-  const [videoList, setVideoList] = useState();
+  const [videoList, setVideoList] = useState(null);
 
    useEffect(() => {
     const fetchList = async () => {
@@ -22,7 +22,7 @@ function App() {
         setVideoList(response.data);
         } catch(error) {console.log(error)}
       }; fetchList();
-  }, [])
+  }, [videoList])
 
   
   return (
