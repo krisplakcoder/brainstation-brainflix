@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Page from './pages/page/Page';
-import Upload from './components/upload/Upload';
+import Upload from './pages/page/Upload';
 import Header from './components/header/header';
 import './App.scss'
 
@@ -20,7 +20,7 @@ function App() {
     const fetchList = async () => {
       try {const response = await axios.get(REQUEST_VIDEOS);
         setVideoList(response.data);
-        console.log(response.data[0]);} catch(error) {console.log(error)}
+        } catch(error) {console.log(error)}
       }; fetchList();
   }, [])
 
