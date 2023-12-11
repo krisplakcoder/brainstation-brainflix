@@ -21,8 +21,6 @@ export default function Page({ videoArray }) {
     pageVideoID = videoArray[0].id;
   } else { pageVideoID = videoId};
 
-  console.log("page video id: ", pageVideoID);
-  console.log("videoId is: ", videoId);
 
 
   const [selectedVideo, getSelectedVideo] = useState();
@@ -30,8 +28,7 @@ export default function Page({ videoArray }) {
   useEffect(() => {
     const fetchVideo = async () => {
       try {const response = await axios.get(HOME_URL + "/videos/" + pageVideoID);
-      console.log("video is:", response.data);
-      getSelectedVideo(response.data);} catch(error) {console.log(error)};
+      getSelectedVideo(response.data);} catch(error) {alert(error)}
     }; fetchVideo();
   },[pageVideoID])
 

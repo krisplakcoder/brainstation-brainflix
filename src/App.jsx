@@ -20,7 +20,7 @@ function App() {
     const fetchList = async () => {
       try {const response = await axios.get(REQUEST_VIDEOS);
         setVideoList(response.data);
-        } catch(error) {console.log(error)}
+        } catch(error) {alert(error)}
       }; fetchList();
   }, [videoList])
 

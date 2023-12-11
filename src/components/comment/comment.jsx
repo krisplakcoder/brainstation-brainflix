@@ -10,9 +10,7 @@ const commentHolder = {comment: ""};
 export default function Comment( {commentArray} ) {
     let { videoId } = useParams();
 
-    console.log("videoID in comment is: ", videoId);
     const navigate = useNavigate();
-    // console.log("comment array:", commentArray);
 
     const [values, setValues] = useState(commentHolder);
 
@@ -29,8 +27,7 @@ export default function Comment( {commentArray} ) {
         if (values.comment == "") {
             alert("please enter a comment");
         } else { 
-            console.log(values);
-            axios.post((HOME_URL+"/videos/"+videoId+"/comments"), values).then((response => {console.log(response.status)}));
+            axios.post((HOME_URL+"/videos/"+videoId+"/comments"), values);
             alert("Your comment has been uploaded");
             window.location.reload();
             

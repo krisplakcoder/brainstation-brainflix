@@ -28,8 +28,7 @@ export default function Upload() {
         if (values.title == "" || values.description == "") {
             alert("please enter text in both fields");
         } else { 
-            console.log(values);
-            axios.post((HOME_URL+"/videos"), values).then((response => {console.log(response.status)}));
+            axios.post((HOME_URL+"/videos"), values);
             alert("Your video has been uploaded");
             return navigate("/");
 
