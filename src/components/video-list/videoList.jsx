@@ -4,13 +4,10 @@ const HOME_URL = "http://localhost:8080";
 
 export default function VideoList({videoID, array}) {
 
-    
-
     let videoList = array.filter((video) => {
         return video.id !== videoID;
     });
    
-
     return (
         <>
         <section className="video-list">
