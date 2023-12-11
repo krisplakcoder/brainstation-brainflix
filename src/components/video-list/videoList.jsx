@@ -21,7 +21,7 @@ export default function VideoList({videoID, array}) {
                     return (
                         <Link to={"/video/" + video.id} className="video-list--link-style">
                         
-                            <div  className="video-list__container">                                
+                            <div key={videoID} className="video-list__container">                                
                                 <div className="video-list__image">
                                     <img src={HOME_URL+video.image} alt="next video" className="next-video__image" />
                                 </div>
